@@ -1,12 +1,22 @@
 #include<stdio.h>
+
+void chang_number(int *ptr){
+    *ptr=500;  
+}
+
 int main(){
-    printf("0-0\n");
-    printf(" ~ \n");
+    // Modules are 18
 
+    // 1. Pointer to Pointer Module - 1 
+    int number = 100;
+    int *ptr = &number;
+    // pptr stores the address of pointer ptr which has the address of number variable
+    int **pptr = &ptr;
+    **pptr =500;
+    printf("through pptr: %d\n", **pptr);
 
-
-
-
+    // Module 2 
+    chang_number(&number);
 
 
 
